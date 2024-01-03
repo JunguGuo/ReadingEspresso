@@ -170,6 +170,7 @@
   background-color: #000; /* Color of the dividing line, change as needed */
   width: 100%; /* Full width */
   margin-bottom: 20px; /* Space between the line and the section, adjust as needed */
+  margin-top: 4em;
 }
 
 .divider-thin {
