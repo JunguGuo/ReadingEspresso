@@ -158,6 +158,11 @@
 }
 
 /*Receipt Page*/
+.align-right-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; /* Aligns content to the right */
+}
 
 /* Divider styles */
 .divider-thick {
