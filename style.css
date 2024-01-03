@@ -1,0 +1,59 @@
+@media print {
+  @page {
+    size: portrait;
+  }
+}
+
+/* Add your custom styles here */
+.placeholder-image {
+  background-color: #aaa;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio */
+  position: relative;
+}
+
+.placeholder-image::after {
+  content: "Placeholder";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 2em;
+}
+/* styles.css - Keep this file consistent across all HTML pages */
+
+/* Existing styles from previous example */
+
+/* Bootstrap Overrides */
+.btn.start-button {
+  font-size: 18px;
+  border-radius: 50px;
+  padding: 10px 25px;
+  color: #000; /* Adjust color as needed */
+  border-color: #000; /* Adjust border color as needed */
+}
+
+.btn.start-button:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+/* Custom dropdown styles */
+.dropdown-toggle {
+  background-color: #4caf50; /* Green background */
+  color: white; /* White text */
+}
+
+.dropdown-menu {
+  background-color: #f7f7f7; /* Light grey background */
+}
+
+.dropdown-item {
+  color: #333; /* Dark grey text */
+}
+
+.dropdown-item:hover {
+  background-color: #4caf50; /* Green background for hover */
+  color: white; /* White text for hover */
+}

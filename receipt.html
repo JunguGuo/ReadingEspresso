@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your Website Title</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Navigation (Optional) -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">Navbar</a>
+      <!-- Other nav items -->
+    </nav>
+
+    <!-- Foreword Section -->
+    <section class="container mt-4">
+      <div class="row">
+        <div class="col-12 col-md-8">
+          <h2>Foreword</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+        <div class="col-12 col-md-4">
+          <div class="placeholder-image"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Chess Section -->
+    <section class="container mt-4">
+      <h2>Chess</h2>
+      <!-- Bootstrap grid for responsive chess board layout -->
+      <!-- Add your chess content here -->
+    </section>
+
+    <!-- Monthly Highlights Section -->
+    <section class="container mt-4">
+      <h2>This Month</h2>
+      <!-- Monthly highlights content -->
+    </section>
+
+    <!-- Footer -->
+    <footer class="container mt-4">
+      <p>&copy; 2024 Your Website</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        // When a dropdown item is clicked
+        $(".dropdown-item").click(function () {
+          // Get the text of the item clicked
+          var selectedText = $(this).text();
+          // Find the dropdown button (parent of the parent of the clicked item)
+          var dropdownBtn = $(this)
+            .parents(".dropdown")
+            .find(".dropdown-toggle");
+          // Update the button text
+          dropdownBtn.text(selectedText);
+          // Optionally, you could also change the 'aria-label' attribute if you're using it for accessibility
+          dropdownBtn.attr("aria-label", selectedText);
+        });
+      });
+    </script>
+  </body>
+</html>
