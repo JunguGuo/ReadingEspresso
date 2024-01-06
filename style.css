@@ -173,12 +173,6 @@
   margin-top: 4em;
 }
 
-.divider-thin {
-  height: 1px; /* Height of the dividing line */
-  background-color: #d3d3d3; /* Color of the dividing line, change as needed */
-  width: 100%; /* Full width */
-  margin-bottom: 20px; /* Space between the line and the section, adjust as needed */
-}
 /* Read Section styles */
 .d-flex {
   align-items: flex-start; /* Aligns items to the start of the container */
