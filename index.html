@@ -416,6 +416,8 @@
           $("#customScreen").removeClass("d-none");
         } else if (pageNum === 0) {
           $("#customScreen").addClass("d-none");
+        } else if (pageNum === 5) {
+          window.location.href = "receipt.html";
         }
 
         $("#page" + pageNum).removeClass("d-none");
