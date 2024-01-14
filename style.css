@@ -251,6 +251,11 @@
   user-select: none;
 }
 
+.tab-group .tab-horizontal {
+  border-right: 1px solid rgb(209, 209, 209); /* Thin gray bottom border */
+  border-bottom: none; /* Ensure no right border by default */
+}
+
 /* Style when the radio button is checked */
 .tab-group .tab-check:checked + .tab {
   color: black; /* Black text */
@@ -260,7 +265,7 @@
 /* Style when the radio button is checked */
 .tab-group .tab-check:checked + .tab-horizontal {
   border-bottom: 5px solid #007bff; /* Blue right border */
-  border-right: none;
+  border-right: 1px solid rgb(209, 209, 209);
 }
 
 /* Optional: Style for hover effect */
