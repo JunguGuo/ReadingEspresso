@@ -238,11 +238,42 @@
   box-shadow: 0px -1px 5px 0 rgba(25, 25, 25, 0.1);
 }
 
-.puzzle-checkbox-input {
+/* Genre Tab */
+.tab-check {
+  display: none;
+}
+/* Style for all labels */
+.tab-group .tab {
+  color: rgb(168, 168, 168); /* Gray text */
+  border-bottom: 1px solid rgb(209, 209, 209); /* Thin gray bottom border */
+  border-right: none; /* Ensure no right border by default */
+  width: 100%; /* Full width */
+  user-select: none;
+}
+
+/* Style when the radio button is checked */
+.tab-group .tab-check:checked + .tab {
+  color: black; /* Black text */
+  border-right: 5px solid #007bff; /* Blue right border */
+}
+
+/* Style when the radio button is checked */
+.tab-group .tab-check:checked + .tab-horizontal {
+  border-bottom: 5px solid #007bff; /* Blue right border */
+  border-right: none;
+}
+
+/* Optional: Style for hover effect */
+.tab-group .tab:hover {
+  color: black; /* Light background on hover */
+  cursor: pointer;
+}
+
+.checkbox-input {
   display: none; /* Hide the default checkbox */
 }
 
-.puzzle-checkbox-label {
+.checkbox-label {
   /* Initial label styles */
   padding: 5px 20px;
   color: #007bff;
@@ -251,8 +282,13 @@
   user-select: none;
 }
 
+.checkbox-label:hover {
+  cursor: pointer;
+  background-color: #007bff28;
+}
+
 /* Style for when the checkbox is checked */
-.puzzle-checkbox-input:checked + .puzzle-checkbox-label {
+.checkbox-input:checked + .checkbox-label {
   border: none;
   background-color: #007bff; /* Change background color */
   color: white; /* Change text color */
