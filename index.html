@@ -5,31 +5,371 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Reading Espresso</title>
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="style.css" />
   </head>
-    <!-- Your Custom CSS -->
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <div
-      class="container vh-100 d-flex flex-column justify-content-center align-items-center"
-    >
-      <h1 class="title mb-3">Reading Espresso</h1>
-      <p class="tagline mb-4">
-        Grab your daily shot of literary espresso, and savor personalized
-        reading on the move.
-      </p>
-      <a
-        href="custom.html"
-        class="btn btn-outline-primary btn-lg start-button"
-        role="button"
-        >Start ></a
+  <body class="font-primary">
+    <!-- Custom Page -->
+    <div id="customScreen" class="d-flex flex-column d-none">
+      <!-- Progress Bar -->
+      <div
+        class="d-flex justify-content-center align-items-center border-bottom px-lg-4 position-relative"
+        style="height: 70px"
       >
+        <div
+          id="progressBar"
+          class="border-bottom border-4 border-primary h-100 d-flex align-items-center position-absolute start-0"
+          style="width: 10%"
+        ></div>
+
+        <div id="pagination" class="align-self-center display-7 fw-semibold">
+          1 of 3
+        </div>
+
+        <!-- <div class="px-4">
+      <img src="img/icon_exit.svg" alt="" />
+    </div> -->
+        <button id="exitBttn" class="btn position-absolute end-0">
+          <img src="img/icon_exit.svg" alt="" />
+        </button>
+      </div>
+
+      <!-- Content -->
+      <div class="container">
+        <!-- Onboarding-->
+        <div
+          id="page1"
+          class="d-none d-flex flex-column align-items-center px-4 px-lg-5 m-5"
+        >
+          <p class="display-4 fw-bold my-5 py-3">How it works</p>
+
+          <div class="row">
+            <div class="col-md-4 mb-5">
+              <div class="d-flex flex-column align-items-center">
+                <img
+                  class="mb-2 mb-md-4"
+                  src="img/step_read.svg"
+                  style="width: 60%"
+                  alt=""
+                />
+
+                <div class="row">
+                  <div class="col-2">
+                    <div
+                      class="d-flex justify-content-center align-items-center rounded-circle bg-primary text-white fw-bold"
+                      style="height: 2rem; aspect-ratio: 1 / 1"
+                    >
+                      1
+                    </div>
+                  </div>
+                  <div class="col-10">
+                    <div class="lead fw-bold">Customize.</div>
+                    <div class="lead">
+                      Your taste, grind, and how much coffee you need!
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4 mb-5">
+              <div class="d-flex flex-column align-items-center">
+                <img
+                  class="mb-2 mb-md-4"
+                  src="img/step_read.svg"
+                  style="width: 60%"
+                  alt=""
+                />
+
+                <div class="row">
+                  <div class="col-2">
+                    <div
+                      class="d-flex justify-content-center align-items-center rounded-circle bg-primary text-white fw-bold"
+                      style="height: 2rem; aspect-ratio: 1 / 1"
+                    >
+                      1
+                    </div>
+                  </div>
+                  <div class="col-10">
+                    <div class="lead fw-bold">Customize.</div>
+                    <div class="lead">
+                      Your taste, grind, and how much coffee you need!
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4 mb-5">
+              <div class="d-flex flex-column align-items-center">
+                <img
+                  class="mb-2 mb-md-4"
+                  src="img/step_read.svg"
+                  style="width: 60%"
+                  alt=""
+                />
+
+                <div class="row">
+                  <div class="col-2">
+                    <div
+                      class="d-flex justify-content-center align-items-center rounded-circle bg-primary text-white fw-bold"
+                      style="height: 2rem; aspect-ratio: 1 / 1"
+                    >
+                      1
+                    </div>
+                  </div>
+                  <div class="col-10">
+                    <div class="lead fw-bold">Customize.</div>
+                    <div class="lead">
+                      Your taste, grind, and how much coffee you need!
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Age Group-->
+
+        <div
+          id="page2"
+          class="d-none d-flex flex-column align-items-center px-4 px-lg-5 m-5"
+        >
+          <p class="display-4 fw-bold my-5 py-3">What’s your age group?</p>
+
+          <div class="d-flex flex-column">
+            <div
+              class="btn-group d-flex flex-column"
+              role="group"
+              aria-label="Basic radio toggle button group"
+            >
+              <div class="mb-2">
+                <input
+                  type="radio"
+                  class="btn-check"
+                  name="btnradio"
+                  id="btnradio1"
+                  autocomplete="off"
+                  checked
+                />
+                <label
+                  class="btn btn-outline-primary rounded-pill text-start px-4"
+                  style="width: 100%"
+                  for="btnradio1"
+                  >0-5 (Early Childhood)</label
+                >
+              </div>
+
+              <div class="mb-2">
+                <input
+                  type="radio"
+                  class="btn-check"
+                  name="btnradio"
+                  id="btnradio2"
+                  autocomplete="off"
+                />
+                <label
+                  class="btn btn-outline-primary rounded-pill text-start px-4"
+                  style="width: 100%"
+                  for="btnradio2"
+                >
+                  6-10 (Middle Childhood)</label
+                >
+              </div>
+
+              <div class="mb-2">
+                <input
+                  type="radio"
+                  class="btn-check"
+                  name="btnradio"
+                  id="btnradio3"
+                  autocomplete="off"
+                />
+                <label
+                  class="btn btn-outline-primary rounded-pill text-start px-4"
+                  style="width: 100%"
+                  for="btnradio3"
+                  >11-15 (Pre-Teen and Early Teen)</label
+                >
+              </div>
+
+              <div class="mb-2">
+                <input
+                  type="radio"
+                  class="btn-check"
+                  name="btnradio"
+                  id="btnradio4"
+                  autocomplete="off"
+                />
+                <label
+                  class="btn btn-outline-primary rounded-pill text-start px-4"
+                  style="width: 100%"
+                  for="btnradio4"
+                  >16-22 (Late Teen and Young Adult)</label
+                >
+              </div>
+
+              <div class="mb-2">
+                <input
+                  type="radio"
+                  class="btn-check"
+                  name="btnradio"
+                  id="btnradio5"
+                  autocomplete="off"
+                />
+                <label
+                  class="btn btn-outline-primary rounded-pill text-start px-4"
+                  style="width: 100%"
+                  for="btnradio5"
+                  >> 23 (Adult)</label
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Puzzle -->
+        <div
+          id="page3"
+          class="d-none d-flex flex-column align-items-center px-4 px-lg-5 m-5"
+        >
+          <p class="display-4 fw-bold my-5 py-3">Do you want a puzzle?</p>
+
+          <form id="checkbox-puzzle">
+            <div class="d-flex flex-wrap justify-content-center">
+              <div class="d-flex flex-column align-items-center m-5">
+                <img
+                  class="mb-4"
+                  style="width: 80%"
+                  src="img/icon_puzzle_chess.svg"
+                  alt=""
+                />
+                <input
+                  class="puzzle-checkbox-input"
+                  type="checkbox"
+                  value="Chess"
+                  id="option1"
+                />
+                <label
+                  class="puzzle-checkbox-label border border-primary"
+                  for="option1"
+                >
+                  Chess
+                </label>
+              </div>
+              <div class="d-flex flex-column align-items-center m-5">
+                <img
+                  class="mb-4"
+                  style="width: 80%"
+                  src="img/icon_puzzle_crossword.svg"
+                  alt=""
+                />
+                <input
+                  class="puzzle-checkbox-input"
+                  type="checkbox"
+                  value="Crossword"
+                  id="option2"
+                />
+                <label
+                  class="puzzle-checkbox-label border border-primary"
+                  for="option2"
+                >
+                  Crossword
+                </label>
+              </div>
+              <div class="d-flex flex-column align-items-center m-5">
+                <img
+                  class="mb-4"
+                  style="width: 80%"
+                  src="img/icon_puzzle_sudoku.svg"
+                  alt=""
+                />
+                <input
+                  class="puzzle-checkbox-input"
+                  type="checkbox"
+                  value="Sudoku"
+                  id="option3"
+                />
+                <label
+                  class="puzzle-checkbox-label border border-primary"
+                  for="option3"
+                >
+                  Sudoku
+                </label>
+              </div>
+              <!-- Add more checkboxes as needed -->
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!-- Nav Bar -->
+      <div
+        class="d-flex justify-content-center up-shadow fixed-bottom bg-white"
+        style="height: 80px"
+      >
+        <button
+          id="backBttn"
+          class="btn btn-outline-dark m-3 fw-semibold fs-4 rounded-0 d-flex justify-content-center align-items-center"
+          style="width: 20%"
+        >
+          <img class="me-4" src="img/arrow_left.svg" style="height: 50%" />
+          BACK
+        </button>
+        <button
+          id="nextBttn"
+          class="btn btn-primary m-3 fw-semibold fs-4 rounded-0 d-flex justify-content-center align-items-center"
+          style="width: 20%"
+        >
+          NEXT
+          <img class="ms-4" src="img/arrow_right.svg" style="height: 50%" />
+        </button>
+      </div>
     </div>
 
-    <!-- Optional JavaScript; choose one of the two! -->
+    <!-- Attract Screen -->
+    <div id="page0" class="container">
+      <div
+        class="d-flex flex-column justify-content-center px-2 px-lg-5"
+        style="height: 100vh"
+      >
+        <div class="row g-5 align-items-center">
+          <div class="col-md-6 pe-lg-5">
+            <img src="img/img_read.svg" style="width: 100%" alt="" />
+          </div>
 
-    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+          <div class="col-md-6 ps-lg-5">
+            <h1 class="display-1 fw-bold mb-3">Reading Espresso</h1>
+            <p class="lead fw-normal mb-4 pb-lg-4">
+              Grab your daily shot of literary espresso, and savor personalized
+              reading on the move.
+            </p>
+
+            <a
+              href="custom.html"
+              class="btn btn-primary btn-lg rounded-pill d-inline-block py-2 px-4"
+              role="button"
+              id="startBttn"
+            >
+              Start
+              <img
+                src="img/arrow_right.svg"
+                style="height: 15px; padding-bottom: 3px"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--jQuery and Bootstrap Bundle (includes Popper) -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
@@ -41,5 +381,61 @@
       integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
       crossorigin="anonymous"
     ></script>
+    <script>
+      let pageNum = 0;
+
+      // Start Btn
+      $(document).ready(function () {
+        $("#startBttn").click(function (event) {
+          event.preventDefault(); // Prevent default link behavior
+          UpdatePage("Next");
+        });
+
+        $("#backBttn").click(function () {
+          UpdatePage("Back");
+        });
+
+        $("#nextBttn").click(function () {
+          UpdatePage("Next");
+        });
+
+        $("#exitBttn").click(() => {
+          location.reload(true);
+        });
+      });
+
+      function UpdatePage(navDir) {
+        $("#page" + pageNum).addClass("d-none");
+
+        if (navDir === "Next") {
+          pageNum++;
+        } else if (navDir === "Back") {
+          pageNum--;
+        }
+        if (pageNum === 1) {
+          $("#customScreen").removeClass("d-none");
+        } else if (pageNum === 0) {
+          $("#customScreen").addClass("d-none");
+        }
+
+        $("#page" + pageNum).removeClass("d-none");
+
+        $("#pagination").text(pageNum + " of 3");
+
+        $("#progressBar").css("width", (pageNum / 4) * 100 + "%");
+      }
+
+      $("#checkbox-puzzle").on("change", ".puzzle-checkbox-input", function () {
+        logCheckedOptions();
+      });
+
+      function logCheckedOptions() {
+        var checkedOptions = [];
+        $("#checkbox-puzzle .puzzle-checkbox-input:checked").each(function () {
+          checkedOptions.push(this.value);
+        });
+        console.log("Checked Options:", checkedOptions);
+      }
+    </script>
   </body>
 </html>

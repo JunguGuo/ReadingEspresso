@@ -103,24 +103,160 @@
   font-style: italic;
 }
 
-/* Add your custom styles here */
-.placeholder-image {
-  background-color: #aaa;
-  width: 100%;
-  padding-top: 56.25%; /* 16:9 Aspect Ratio */
-  position: relative;
+@font-face {
+  font-family: "WorkSans";
+  src: url("fonts/WorkSans-Black.ttf") format("truetype");
+  font-weight: 900; /* Black weight */
+  font-style: normal;
 }
 
-.placeholder-image::after {
-  content: "Placeholder";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
-  font-size: 2em;
+@font-face {
+  font-family: "WorkSans";
+  src: url("fonts/WorkSans-BlackItalic.ttf") format("truetype");
+  font-weight: 900; /* Black weight */
+  font-style: italic;
 }
-/* styles.css - Keep this file consistent across all HTML pages */
+
+@font-face {
+  font-family: "WorkSans";
+  src: url("fonts/WorkSans-Bold.ttf") format("truetype");
+  font-weight: 700; /* Bold weight */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "WorkSans";
+  src: url("fonts/WorkSans-BoldItalic.ttf") format("truetype");
+  font-weight: 700; /* Bold weight */
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "WorkSans";
+  src: url("fonts/WorkSans-ExtraBold.ttf") format("truetype");
+  font-weight: 800; /* ExtraBold weight */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "WorkSans";
+  src: url("fonts/WorkSans-ExtraBoldItalic.ttf") format("truetype");
+  font-weight: 800; /* ExtraBold weight */
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "WorkSans";
+  src: url("fonts/WorkSans-ExtraLight.ttf") format("truetype");
+  font-weight: 200; /* ExtraLight weight */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "WorkSans";
+  src: url("fonts/WorkSans-ExtraLightItalic.ttf") format("truetype");
+  font-weight: 200; /* ExtraLight weight */
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "WorkSans";
+  src: url("fonts/WorkSans-Italic.ttf") format("truetype");
+  font-weight: 400; /* Normal weight */
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "WorkSans";
+  src: url("fonts/WorkSans-Light.ttf") format("truetype");
+  font-weight: 300; /* Light weight */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "WorkSans";
+  src: url("fonts/WorkSans-LightItalic.ttf") format("truetype");
+  font-weight: 300; /* Light weight */
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "WorkSans";
+  src: url("fonts/WorkSans-Medium.ttf") format("truetype");
+  font-weight: 500; /* Medium weight */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "WorkSans";
+  src: url("fonts/WorkSans-MediumItalic.ttf") format("truetype");
+  font-weight: 500; /* Medium weight */
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "WorkSans";
+  src: url("fonts/WorkSans-Regular.ttf") format("truetype");
+  font-weight: 400; /* Regular weight */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "WorkSans";
+  src: url("fonts/WorkSans-SemiBold.ttf") format("truetype");
+  font-weight: 600; /* SemiBold weight */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "WorkSans";
+  src: url("fonts/WorkSans-SemiBoldItalic.ttf") format("truetype");
+  font-weight: 600; /* SemiBold weight */
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "WorkSans";
+  src: url("fonts/WorkSans-Thin.ttf") format("truetype");
+  font-weight: 100; /* Thin weight */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "WorkSans";
+  src: url("fonts/WorkSans-ThinItalic.ttf") format("truetype");
+  font-weight: 100; /* Thin weight */
+  font-style: italic;
+}
+
+/* Customize Page */
+.font-primary {
+  font-family: "WorkSans";
+}
+
+.up-shadow {
+  box-shadow: 0px -1px 5px 0 rgba(25, 25, 25, 0.1);
+}
+
+.puzzle-checkbox-input {
+  display: none; /* Hide the default checkbox */
+}
+
+.puzzle-checkbox-label {
+  /* Initial label styles */
+  padding: 5px 20px;
+  color: #007bff;
+  border-radius: 50rem;
+  display: inline-block;
+  user-select: none;
+}
+
+/* Style for when the checkbox is checked */
+.puzzle-checkbox-input:checked + .puzzle-checkbox-label {
+  border: none;
+  background-color: #007bff; /* Change background color */
+  color: white; /* Change text color */
+}
 
 /* Existing styles from previous example */
 
@@ -158,10 +294,41 @@
 }
 
 /*Receipt Page*/
-.align-right-container {
+/* .align-right-container {
   display: flex;
   flex-direction: column;
-  align-items: flex-end; /* Aligns content to the right */
+  align-items: flex-end; 
+} */
+.logo {
+  max-width: 400px;
+  height: auto;
+}
+@media (max-width: 400px) {
+  .logo {
+    width: 100%;
+  }
+}
+@media (min-width: 400px) {
+  .logo {
+    width: 40%;
+  }
+}
+/* Add your custom styles here */
+.placeholder-image {
+  background-color: #aaa;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio */
+  position: relative;
+}
+
+.placeholder-image::after {
+  content: "Placeholder";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 2em;
 }
 
 /* Divider styles */
@@ -169,15 +336,15 @@
   height: 3px; /* Height of the dividing line */
   background-color: #000; /* Color of the dividing line, change as needed */
   width: 100%; /* Full width */
-  margin-bottom: 20px; /* Space between the line and the section, adjust as needed */
-  margin-top: 4em;
+  margin-bottom: 1rem; /* Space between the line and the section, adjust as needed */
+  margin-top: 3em;
 }
 
 /* Read Section styles */
-.d-flex {
-  align-items: flex-start; /* Aligns items to the start of the container */
+/* .d-flex {
+  align-items: flex-start; 
   align-items: center;
-}
+} */
 
 .icon {
   height: 2em; /* This sets the icon's height relative to the font size */
