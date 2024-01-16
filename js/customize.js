@@ -3,6 +3,7 @@ $(document).ready(function () {
   let pageNum = 0;
   let selectedCategory;
   let selectedSubcategory;
+  let barcodeInput = $("#barcodeInput");
 
   const contentTags = {
     Fiction: {
@@ -40,6 +41,24 @@ $(document).ready(function () {
   bindEventHandlers();
   generateCategories(contentTags);
   generateTags(contentTags);
+
+  barcodeInput.on("keypress", function (e) {
+    if (e.which === 13) {
+      // Enter key is pressed
+      let barcode = barcodeInput.val();
+      console.log("Scanned Barcode:", barcode);
+
+      // Clear the input for the next scan
+      barcodeInput.val("");
+    }
+  });
+  barcodeInput.focus();
+  // Optionally, re-focus on the input field whenever it loses focus
+  barcodeInput.on("blur", function () {
+    setTimeout(function () {
+      barcodeInput.focus();
+    }, 10);
+  });
 
   function bindEventHandlers() {
     // ！ Nav Events

@@ -228,6 +228,16 @@
   font-weight: 100; /* Thin weight */
   font-style: italic;
 }
+.barcode-input {
+  outline: none;
+  border: 0px solid rgba(255, 255, 255, 0);
+  width: 0px;
+  height: 0px;
+}
+.barcode-input:focus {
+  outline: none; /* Removes the default outline */
+  border: 0px solid rgba(255, 255, 255, 0); /* Custom border color when focused */
+}
 
 /* Customize Page */
 .font-primary {
@@ -245,7 +255,7 @@
 /* Style for all labels */
 .tab-group .tab {
   color: rgb(168, 168, 168); /* Gray text */
-  border-bottom: 1px solid rgb(209, 209, 209); /* Thin gray bottom border */
+  border-bottom: 1px solid rgba(209, 209, 209, 0); /* Thin gray bottom border */
   border-right: none; /* Ensure no right border by default */
   width: 100%; /* Full width */
   user-select: none;
