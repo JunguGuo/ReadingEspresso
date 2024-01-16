@@ -148,7 +148,7 @@ $(document).ready(function () {
           .replace(/\s+/g, "")}" id="tab-${subCategoryId}" autocomplete="off">`
       );
       const $label = $(
-        `<label class="tab text-end px-4 py-2" for="tab-${subCategoryId}">${subCategoryName}</label>`
+        `<label class="tab tab-horizontal text-end px-3 py-1" for="tab-${subCategoryId}">${subCategoryName}</label>`
       );
 
       const $div = $("<div></div>").append($input, $label);
