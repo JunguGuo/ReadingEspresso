@@ -319,13 +319,14 @@
             What are you in the mood for?
           </p>
 
-          <!-- Genre Tab Groups -->
+          <!-- Categories Groups -->
           <div
+            id="categoriesContainer"
             class="tab-group d-flex flex-wrap align-items-end h4 mb-5"
             role="group"
             aria-label="Radio toggle tab group"
           >
-            <div>
+            <!-- <div>
               <input
                 type="radio"
                 class="tab-check"
@@ -372,98 +373,81 @@
                 for="tab-genre3"
                 >Staff Picks</label
               >
-            </div>
-
-            <div>
-              <input
-                type="radio"
-                class="tab-check"
-                name="tab-genre"
-                id="tab-genre4"
-                autocomplete="off"
-              />
-              <label
-                class="tab tab-horizontal text-end px-4 py-2"
-                style="width: 100%"
-                for="tab-genre4"
-                >Popular</label
-              >
-            </div>
+            </div> -->
           </div>
 
           <div class="d-flex">
-            <!-- Sub Tab Group 1 for Genre 1 -->
-            <div class="d-flex flex-column mb-5">
-              <div
-                class="tab-group d-flex flex-column h6"
-                role="group"
-                aria-label="radio toggle tab group"
-              >
-                <div class="">
-                  <input
-                    type="radio"
-                    class="tab-check"
-                    name="tab-genre1"
-                    id="tab-genre1-1"
-                    autocomplete="off"
-                    checked
-                  />
-                  <label
-                    class="tab text-end px-4 py-2"
-                    style="width: 100%"
-                    for="tab-genre1-1"
-                    >History</label
-                  >
-                </div>
+            <!-- Subcategories -->
+            <div
+              id="subcategoriesContainer"
+              class="tab-group d-flex flex-column h6 mb-5"
+              role="group"
+              aria-label="radio toggle tab group"
+            >
+              <div>
+                <input
+                  type="radio"
+                  class="tab-check"
+                  name="tab-genre1"
+                  id="tab-genre1-1"
+                  autocomplete="off"
+                  checked
+                />
+                <label
+                  class="tab text-end px-4 py-2"
+                  style="width: 100%"
+                  for="tab-genre1-1"
+                  >Classics</label
+                >
+              </div>
 
-                <div class="">
-                  <input
-                    type="radio"
-                    class="tab-check"
-                    name="tab-genre1"
-                    id="tab-genre1-2"
-                    autocomplete="off"
-                  />
-                  <label
-                    class="tab text-end px-4 py-2"
-                    style="width: 100%"
-                    for="tab-genre1-2"
-                  >
-                    Poetry</label
-                  >
-                </div>
+              <div>
+                <input
+                  type="radio"
+                  class="tab-check"
+                  name="tab-genre1"
+                  id="tab-genre1-2"
+                  autocomplete="off"
+                />
+                <label
+                  class="tab text-end px-4 py-2"
+                  style="width: 100%"
+                  for="tab-genre1-2"
+                >
+                  Fantasy</label
+                >
+              </div>
 
-                <div class="">
-                  <input
-                    type="radio"
-                    class="tab-check"
-                    name="tab-genre1"
-                    id="tab-genre1-3"
-                    autocomplete="off"
-                  />
-                  <label
-                    class="tab text-end px-4 py-2"
-                    style="width: 100%"
-                    for="tab-genre1-3"
-                    >Essay</label
-                  >
-                </div>
+              <div>
+                <input
+                  type="radio"
+                  class="tab-check"
+                  name="tab-genre1"
+                  id="tab-genre1-3"
+                  autocomplete="off"
+                />
+                <label
+                  class="tab text-end px-4 py-2"
+                  style="width: 100%"
+                  for="tab-genre1-3"
+                  >Science Fiction</label
+                >
+              </div>
 
-                <div class="">
-                  <input
-                    type="radio"
-                    class="tab-check"
-                    name="tab-genre1"
-                    id="tab-genre1-4"
-                    autocomplete="off"
-                  />
-                  <label
-                    class="tab text-end px-4 py-2"
-                    style="width: 100%"
-                    for="tab-genre1-4"
-                    >Short Story</label
-                  >
-                </div>
+              <div>
+                <input
+                  type="radio"
+                  class="tab-check"
+                  name="tab-genre1"
+                  id="tab-genre1-4"
+                  autocomplete="off"
+                />
+                <label
+                  class="tab text-end px-4 py-2"
+                  style="width: 100%"
+                  for="tab-genre1-4"
+                  >Mystery</label
+                >
               </div>
             </div>
 
@@ -481,7 +465,7 @@
                     class="checkbox-label border border-primary"
                     for="tag1"
                   >
-                    Adventure
+                    Victorian
                   </label>
                 </div>
 
@@ -496,7 +480,7 @@
                     class="checkbox-label border border-primary"
                     for="tag2"
                   >
-                    Romance
+                    Elizabethan
                   </label>
                 </div>
 
@@ -511,52 +495,7 @@
                     class="checkbox-label border border-primary"
                     for="tag3"
                   >
-                    Nature
-                  </label>
-                </div>
-
-                <div class="m-2">
-                  <input
-                    class="checkbox-input"
-                    type="checkbox"
-                    value="Chess"
-                    id="tag4"
-                  />
-                  <label
-                    class="checkbox-label border border-primary"
-                    for="tag4"
-                  >
-                    Love
-                  </label>
-                </div>
-
-                <div class="m-2">
-                  <input
-                    class="checkbox-input"
-                    type="checkbox"
-                    value="Chess"
-                    id="tag5"
-                  />
-                  <label
-                    class="checkbox-label border border-primary"
-                    for="tag5"
-                  >
-                    Childhood
-                  </label>
-                </div>
-
-                <div class="m-2">
-                  <input
-                    class="checkbox-input"
-                    type="checkbox"
-                    value="Chess"
-                    id="tag6"
-                  />
-                  <label
-                    class="checkbox-label border border-primary"
-                    for="tag6"
-                  >
-                    Justice
+                    Romanticism
                   </label>
                 </div>
 
@@ -648,6 +587,49 @@
     ></script>
     <script>
       let pageNum = 0;
+      let selectedCategory;
+      let selectedSubcategory;
+
+      let content_tags = {
+        Fiction: {
+          Classics: ["Victorian", "Elizabethan", "Romanticism"],
+          Fantasy: ["Epic Fantasy", "Urban Fantasy", "Dark Fantasy"],
+          "Science Fiction": ["Space Opera", "Cyberpunk", "Dystopian"],
+          Mystery: ["Crime", "Detective", "Thriller"],
+        },
+        "Non-Fiction": {
+          Biographies: ["Historical Figures", "Celebrities", "Scientists"],
+          "Self-Help": [
+            "Personal Development",
+            "Health & Wellness",
+            "Productivity",
+          ],
+          History: ["Ancient History", "Modern History", "World Wars"],
+          "Science & Technology": [
+            "Artificial Intelligence",
+            "Space Exploration",
+            "Medicine",
+          ],
+        },
+        "Staff Picks": {
+          "Must-Reads": [
+            "Award Winners",
+            "Critically Acclaimed",
+            "Bestsellers",
+          ],
+          Contemporary: ["Modern Classics", "New Releases", "Popular Authors"],
+          "World Literature": [
+            "African Literature",
+            "Asian Literature",
+            "European Literature",
+          ],
+          "Cultural & Social": [
+            "Social Justice",
+            "Memoirs",
+            "Cultural Studies",
+          ],
+        },
+      };
 
       // Start Btn
       $(document).ready(function () {
@@ -667,7 +649,29 @@
         $("#exitBttn").click(() => {
           location.reload(true);
         });
+
+        generateCategories(content_tags);
+
+        $("#categoriesContainer").on("change", ".tab-check", function () {
+          handleCategoryChange(this);
+        });
+
+        $("#subcategoriesContainer").on("change", ".tab-check", function () {
+          handleSubategoryChange(this);
+        });
+
+        // Manually trigger the event for the default checked radio button
+        $("#categoriesContainer .tab-check:checked").each(function () {
+          handleCategoryChange(this);
+        });
       });
+
+      function handleCategoryChange(radioElement) {
+        selectedCategory = $(radioElement).next("label").text();
+        console.log("Selected Category:", selectedCategory);
+        // Additional logic for the selected category
+        updateSubcategories();
+      }
 
       function UpdatePage(navDir) {
         $("#page" + pageNum).addClass("d-none");
@@ -705,6 +709,79 @@
           .get();
         console.log("Checked Options:", checkedOptions);
       });
+
+      function generateCategories(content_tags) {
+        let $container = $("#categoriesContainer");
+        let categoryIndex = 1;
+
+        $.each(content_tags, function (category) {
+          let $div = $("<div></div>");
+
+          let $input = $("<input>", {
+            type: "radio",
+            class: "tab-check",
+            name: "tab-genre",
+            id: "tab-genre" + categoryIndex,
+            autocomplete: "off",
+          });
+          if (categoryIndex === 1) $input.prop("checked", true);
+
+          let $label = $("<label>", {
+            class: "tab tab-horizontal text-end px-4 py-2",
+            style: "width: 100%",
+            for: "tab-genre" + categoryIndex,
+            text: category,
+          });
+
+          $div.append($input).append($label);
+          $container.append($div);
+
+          categoryIndex++;
+        });
+      }
+
+      function updateSubcategories() {
+        let $container = $("#subcategoriesContainer");
+        $container.empty(); // Clear existing content
+
+        $.each(content_tags[selectedCategory], function (subCategory, items) {
+          // key, value
+
+          let $div = $("<div></div>");
+          let $input = $("<input>", {
+            type: "radio",
+            class: "tab-check",
+            name: "tab-" + selectedCategory.toLowerCase().replace(/\s+/g, ""),
+            id:
+              "tab-" +
+              selectedCategory.toLowerCase().replace(/\s+/g, "") +
+              "-" +
+              subCategory,
+            autocomplete: "off",
+          });
+          let $label = $("<label>", {
+            class: "tab text-end px-4 py-2",
+            style: "width: 100%",
+            for:
+              "tab-" +
+              selectedCategory.toLowerCase().replace(/\s+/g, "") +
+              "-" +
+              subCategory,
+            text: subCategory,
+          });
+
+          $div.append($input).append($label);
+          $container.append($div);
+        });
+      }
+
+      function handleSubategoryChange(radioElement) {
+        selectedSubcategory = $(radioElement).next("label").text();
+        console.log("Selected Subategory:", selectedSubcategory);
+        updateTags();
+      }
+
+      function updateTags() {}
     </script>
   </body>
 </html>
