@@ -453,7 +453,7 @@
 
             <!-- Tags -->
             <form id="checkbox-tags">
-              <div class="d-flex flex-wrap mx-1 mx-lg-5">
+              <div id="tagContainer" class="d-flex flex-wrap mx-1 mx-lg-5">
                 <div class="m-2">
                   <input
                     class="checkbox-input"
@@ -651,6 +651,7 @@
         });
 
         generateCategories(content_tags);
+        generateTags(content_tags);
 
         $("#categoriesContainer").on("change", ".tab-check", function () {
           handleCategoryChange(this);
@@ -697,24 +698,24 @@
       }
 
       $("#checkbox-puzzle").on("change", ".checkbox-input", () => {
-        let checkedOptions = $("#checkbox-puzzle .checkbox-input:checked")
+        let checkedPuzzles = $("#checkbox-puzzle .checkbox-input:checked")
           .map((_, el) => el.value)
           .get();
-        console.log("Checked Options:", checkedOptions);
+        console.log("Checked Puzzles:", checkedPuzzles);
       });
 
       $("#checkbox-tags").on("change", ".checkbox-input", () => {
-        let checkedOptions = $("#checkbox-tags .checkbox-input:checked")
+        let checkedTags = $("#checkbox-tags .checkbox-input:checked")
           .map((_, el) => el.value)
           .get();
-        console.log("Checked Options:", checkedOptions);
+        console.log("Checked Tags:", checkedTags);
       });
 
-      function generateCategories(content_tags) {
+      function generateCategories(obj) {
         let $container = $("#categoriesContainer");
         let categoryIndex = 1;
 
-        $.each(content_tags, function (category) {
+        $.each(obj, function (category) {
           let $div = $("<div></div>");
 
           let $input = $("<input>", {
@@ -779,6 +780,50 @@
         selectedSubcategory = $(radioElement).next("label").text();
         console.log("Selected Subategory:", selectedSubcategory);
         updateTags();
+      }
+
+      function generateTags(obj) {
+        let $tagContainer = $("#tagContainer");
+        $tagContainer.empty();
+
+        let queue = [obj];
+        while (queue.length > 0) {
+          let current = queue.shift();
+
+          $.each(current, function (key, value) {
+            if ($.isArray(value)) {
+              $.each(value, function (index, item) {
+                //console.log(item);
+
+                // Create the div element
+                let $div = $("<div>", { class: "m-2" });
+
+                // Create the input element
+                let $input = $("<input>", {
+                  class: "checkbox-input",
+                  type: "checkbox",
+                  value: item,
+                  id: item.toLowerCase().replace(/\s+/g, ""),
+                });
+
+                // Create the label element
+                let $label = $("<label>", {
+                  class: "checkbox-label border border-primary",
+                  for: item.toLowerCase().replace(/\s+/g, ""),
+                }).text(item);
+
+                // Append input and label to the div
+                $div.append($input).append($label);
+
+                // Append the div to the body or another container element
+                // Change 'body' to your desired container if needed
+                $tagContainer.append($div);
+              });
+            } else if (typeof value === "object") {
+              queue.push(value);
+            }
+          });
+        }
       }
 
       function updateTags() {}
