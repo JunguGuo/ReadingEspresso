@@ -41,6 +41,7 @@ $(document).ready(function () {
   bindEventHandlers();
   generateCategories(contentTags);
   generateTags(contentTags);
+  initializeDefaultCategory();
 
   barcodeInput.on("keypress", function (e) {
     if (e.which === 13) {
